@@ -61,9 +61,9 @@ const NewPatientScreen = ({ navigation }) => {
       const onHandleChange = (value, type) => {
             onInputChange(type, value, dispatchFormState, formState);
       };
-      const onHandleBlur = (value, type) => {
+      /*   const onHandleBlur = (value, type) => {
             onFocusOut(type, value, dispatchFormState, formState);
-      };
+      }; */
       return (
             <ScrollView>
                   <KeyboardAvoidingView
@@ -85,7 +85,7 @@ const NewPatientScreen = ({ navigation }) => {
                                           onChangeText={(text) =>
                                                 onHandleChange(text, 'email')
                                           }
-                                          onBlur={(e) =>
+                                          /*  onBlur={(e) =>
                                                 onHandleBlur(
                                                       e.target
                                                             ._internalFiberInstanceHandleDEV
@@ -93,7 +93,7 @@ const NewPatientScreen = ({ navigation }) => {
                                                             .value,
                                                       'email'
                                                 )
-                                          }
+                                          } */
                                           hasError={formState.email.hasError}
                                           error={formState.email.error}
                                           touched={formState.email.touched}
@@ -108,7 +108,7 @@ const NewPatientScreen = ({ navigation }) => {
                                           onChangeText={(text) =>
                                                 onHandleChange(text, 'nombre')
                                           }
-                                          onBlur={(e) =>
+                                          /* onBlur={(e) =>
                                                 onHandleBlur(
                                                       e.target
                                                             ._internalFiberInstanceHandleDEV
@@ -116,7 +116,7 @@ const NewPatientScreen = ({ navigation }) => {
                                                             .value,
                                                       'nombre'
                                                 )
-                                          }
+                                          } */
                                           hasError={formState.nombre.hasError}
                                           error={formState.nombre.error}
                                           touched={formState.nombre.touched}
@@ -132,7 +132,7 @@ const NewPatientScreen = ({ navigation }) => {
                                           onChangeText={(text) =>
                                                 onHandleChange(text, 'telefono')
                                           }
-                                          onBlur={(e) =>
+                                          /*       onBlur={(e) =>
                                                 onHandleBlur(
                                                       e.target
                                                             ._internalFiberInstanceHandleDEV
@@ -140,7 +140,7 @@ const NewPatientScreen = ({ navigation }) => {
                                                             .value,
                                                       'telefono'
                                                 )
-                                          }
+                                          } */
                                           hasError={formState.telefono.hasError}
                                           error={formState.telefono.error}
                                           touched={formState.telefono.touched}
