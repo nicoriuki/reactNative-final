@@ -19,8 +19,8 @@ const SelectDate = ({ navigation }) => {
       };
       const setDates = () => {
             dispatch(newDate(dates));
-            dispatch(delDate());
             dispatch(getDates());
+            dispatch(delDate());
             navigation.navigate('Home');
       };
       const onCancelDate = () => {

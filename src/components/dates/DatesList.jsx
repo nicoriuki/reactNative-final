@@ -7,15 +7,13 @@ import { getDates } from '../../store/actions/datesActions';
 const List = () => {
       const dispatch = useDispatch();
       const dates = useSelector((state) => state.dates.list);
-      const user = useSelector((state) => state.user.list[0].email);
-      const userDates = dates.filter((date) => date.user === user);
-      console.log(user);
+
       useEffect(() => {
             dispatch(getDates());
       }, []);
       return (
             <FlatList
-                  data={userDates}
+                  data={dates}
                   renderItem={(itemData) => {
                         return <Item itemData={itemData} />;
                   }}

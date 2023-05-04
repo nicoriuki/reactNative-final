@@ -40,11 +40,11 @@ export const signUp = (email, password, nombre, telefono, photo) => {
                         photo
                   );
 
+                  const data = await response.json();
                   let user = {
                         email: email,
                   };
                   await dispatch(storeUser(user));
-                  const data = await response.json();
 
                   dispatch({
                         type: SIGN_UP,
@@ -66,11 +66,7 @@ export const signIn = (email, password) => {
                   dispatch({
                         type: SIGN_UP_START,
                   });
-                  /*   console.log(email);
-                  let user = {
-                        email: email,
-                  };
-                  dispatch(storeUser(user)); */
+
                   const response = await fetch(URL_AUTH_SIGN_IN, {
                         method: 'POST',
                         headers: {
@@ -88,6 +84,10 @@ export const signIn = (email, password) => {
                         console.log('error', errorResData);
                   }
 
+                  let user = {
+                        email: email,
+                  };
+                  dispatch(storeUser(user));
                   const data = await response.json();
 
                   dispatch({

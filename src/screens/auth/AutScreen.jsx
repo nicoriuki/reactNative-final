@@ -11,7 +11,6 @@ import { signIn, signUp } from '../../store/actions/authActions';
 import { UPDATED_FORM, onFocusOut, onInputChange } from '../../utils/form';
 import { Button, InputAuth, PhotoSelector } from '../../components';
 import { styles } from './style';
-import { storeUser } from '../../store/actions/userActions';
 
 const initialState = {
       email: { value: '', error: '', touched: false, hasError: true },
@@ -72,7 +71,6 @@ const AuthScreen = () => {
             let user = {
                   email: formState.email.value,
             };
-            dispatch(storeUser(user));
             dispatch(signIn(formState.email.value, formState.password.value));
       };
       const onHandleRegister = () => {
@@ -86,9 +84,9 @@ const AuthScreen = () => {
       const onHandleChange = (value, type) => {
             onInputChange(type, value, dispatchFormState, formState);
       };
-      const onHandleBlur = (value, type) => {
+      /*   const onHandleBlur = (value, type) => {
             onFocusOut(type, value, dispatchFormState, formState);
-      };
+      }; */
       return (
             <ScrollView>
                   <KeyboardAvoidingView
@@ -110,7 +108,7 @@ const AuthScreen = () => {
                                           onChangeText={(text) =>
                                                 onHandleChange(text, 'email')
                                           }
-                                          onBlur={(e) =>
+                                          /*  onBlur={(e) =>
                                                 onHandleBlur(
                                                       e.target
                                                             ._internalFiberInstanceHandleDEV
@@ -118,7 +116,7 @@ const AuthScreen = () => {
                                                             .value,
                                                       'email'
                                                 )
-                                          }
+                                          } */
                                           hasError={formState.email.hasError}
                                           error={formState.email.error}
                                           touched={formState.email.touched}
@@ -128,14 +126,14 @@ const AuthScreen = () => {
                                           label="Password"
                                           placeholderTextColor={'#726E97'}
                                           value={formState.password.value}
-                                          placeholder="ingrese su contraseña"
+                                          placeholder="De 8 a16 minimo una mayuscula ,minuscula y numero"
                                           secureTextEntry={true}
                                           autoCapitalize="none"
                                           autoCorrect={false}
                                           onChangeText={(text) =>
                                                 onHandleChange(text, 'password')
                                           }
-                                          onBlur={(e) =>
+                                          /* onBlur={(e) =>
                                                 onHandleBlur(
                                                       e.target
                                                             ._internalFiberInstanceHandleDEV
@@ -143,7 +141,7 @@ const AuthScreen = () => {
                                                             .value,
                                                       'password'
                                                 )
-                                          }
+                                          } */
                                           hasError={formState.password.hasError}
                                           error={formState.password.error}
                                           touched={formState.password.touched}
@@ -163,7 +161,7 @@ const AuthScreen = () => {
                                                             'nombre'
                                                       )
                                                 }
-                                                onBlur={(e) =>
+                                                /*     onBlur={(e) =>
                                                       onHandleBlur(
                                                             e.target
                                                                   ._internalFiberInstanceHandleDEV
@@ -171,7 +169,7 @@ const AuthScreen = () => {
                                                                   .value,
                                                             'nombre'
                                                       )
-                                                }
+                                                } */
                                                 hasError={
                                                       formState.nombre.hasError
                                                 }
@@ -197,7 +195,7 @@ const AuthScreen = () => {
                                                             'telefono'
                                                       )
                                                 }
-                                                onBlur={(e) =>
+                                                /*   onBlur={(e) =>
                                                       onHandleBlur(
                                                             e.target
                                                                   ._internalFiberInstanceHandleDEV
@@ -205,7 +203,7 @@ const AuthScreen = () => {
                                                                   .value,
                                                             'telefono'
                                                       )
-                                                }
+                                                } */
                                                 hasError={
                                                       formState.telefono
                                                             .hasError

@@ -10,7 +10,7 @@ export const storeUser = (data) => {
 
                   dispatch({ type: SETUSER, payload: userDb.rows._array });
             } catch (error) {
-                  console.log(error);
+                  console.log('error storeUser', error);
             }
       };
 };
@@ -30,7 +30,7 @@ export const setUser = (data) => {
 
                   dispatch({ type: SETUSER, payload: data });
             } catch (error) {
-                  console.log(error);
+                  console.log('error setUser', error);
             }
       };
 };
@@ -50,7 +50,7 @@ export const getUser = (email) => {
                   const userDb = await fetchUser(email);
                   dispatch({ type: GETUSER, payload: userDb });
             } catch (error) {
-                  console.log(error);
+                  console.log('error getUser', error);
             }
       };
 };

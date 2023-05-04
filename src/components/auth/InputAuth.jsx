@@ -7,7 +7,7 @@ const InputAuth = ({
       value,
       onChangeText,
       onFocus,
-      onBlur,
+      /* onBlur, */
       maxLength,
       placeholder,
       placeholderTextColor,
@@ -27,7 +27,7 @@ const InputAuth = ({
                               value={value}
                               onChangeText={onChangeText}
                               onFocus={onFocus}
-                              onBlur={onBlur}
+                              /*  onBlur={onBlur} */
                               maxLength={maxLength}
                               placeholder={placeholder}
                               placeholderTextColor={placeholderTextColor}
@@ -74,7 +74,7 @@ export const styles = StyleSheet.create({
       },
       helperText: {
             fontSize: 12,
-            /*  fontFamily: 'Poppins-Bold', */
+
             color: '#ff0000',
       },
 });

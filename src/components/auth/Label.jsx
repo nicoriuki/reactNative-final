@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, Text } from 'react-native';
 import { StyleSheet } from 'react-native';
 
@@ -27,7 +26,6 @@ export const styles = StyleSheet.create({
       label: {
             textAlign: 'center',
             fontSize: 14,
-            /*   fontFamily: 'Poppins-Regular', */
             marginVertical: 5,
             color: '#000000',
       },

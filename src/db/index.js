@@ -12,7 +12,7 @@ export const init = () => {
                               resolve();
                         },
                         (_, err) => {
-                              console.log(err);
+                              console.log('error initdb', err);
                               reject(err);
                         }
                   );
@@ -31,7 +31,7 @@ export const insertUser = (nombre, email, telefono, photo) => {
                               resolve(result);
                         },
                         (_, err) => {
-                              console.log(err);
+                              console.log('error insertusrDb', err);
                               reject(err);
                         }
                   );
@@ -51,7 +51,7 @@ export const fetchUser = (email) => {
                               resolve(result);
                         },
                         (_, err) => {
-                              console.log(err);
+                              console.log('error fetchUserDb', err);
                               reject(err);
                         }
                   );

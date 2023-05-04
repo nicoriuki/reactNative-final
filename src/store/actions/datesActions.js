@@ -12,7 +12,6 @@ export const newDate = (data) => {
                         }),
                   });
                   const result = await response.json();
-                  console.log(result);
 
                   dispatch({ type: NEWDATE, payload: data });
             } catch (error) {
@@ -31,10 +30,8 @@ export const getDates = () => {
                         return {
                               ...result[key].date,
                               id: key,
-        
                         };
                   });
-            
 
                   dispatch({ type: ALLDATES, payload: dates });
             } catch (error) {
