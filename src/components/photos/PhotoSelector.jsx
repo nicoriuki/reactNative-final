@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View, Image, Alert } from 'react-native';
+import { Text, View, Image, Alert } from 'react-native';
 import { useState } from 'react';
 import * as ImagePicker from 'expo-image-picker';
 import { useSelector } from 'react-redux';
-
+import { styles } from './style';
 import Button from './../common/Button';
 
 const PhotoSelector = ({ onImage }) => {
@@ -55,24 +55,3 @@ const PhotoSelector = ({ onImage }) => {
 };
 
 export default PhotoSelector;
-
-const styles = StyleSheet.create({
-      container: {
-            marginBottom: 10,
-      },
-      preview: {
-            width: '100%',
-            height: 100,
-            marginBottom: 10,
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderColor: 'pink',
-            borderWith: 1,
-      },
-      image: {
-            width: 70,
-            height: 70,
-            borderRadius: 35,
-            backgroundColor: 'blue',
-      },
-});

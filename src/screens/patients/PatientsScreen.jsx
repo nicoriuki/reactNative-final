@@ -1,5 +1,5 @@
 import { View, Button } from 'react-native';
-import { styles } from '../../styles/style';
+import { styles } from './style';
 import { useDispatch } from 'react-redux';
 import { getPatient } from '../../store/actions/patientsActions';
 import { useEffect } from 'react';
@@ -12,7 +12,7 @@ const PatientsScreen = ({ navigation }) => {
             dispatch(getPatient());
       }, []);
       return (
-            <View style={styles.container}>
+            <View style={styles.containerPatientScreen}>
                   <View style={styles.botonHome}>
                         <Button
                               title="Agregar paciente"

@@ -1,9 +1,8 @@
 import { Text, View, Modal as RNmodal } from 'react-native';
-import { styles } from '../../styles/style';
+import { styles } from './style';
 import Button from '../common/Button';
 
 const ConfirmDate = ({ modalVisible, onCancelDate, date, setDates }) => {
-      
       return (
             <RNmodal
                   animationType="slide"

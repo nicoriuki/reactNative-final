@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setEmail, setName, setUser } from '../../store/actions/dateActions';
 import { Button, Card, SelectPatient } from '../../components';
 
-import { styles } from '../../styles/style';
+import { styles } from './style';
 
 const FormScreen = ({ navigation }) => {
       const dispatch = useDispatch();

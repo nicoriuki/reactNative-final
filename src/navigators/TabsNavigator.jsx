@@ -1,7 +1,7 @@
 import { Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { styles } from '../styles/style';
+import { styles } from './style';
 import { PerfilNavigator, PatientsNavigator, DateNavigator } from './';
 
 const BottomTabs = createBottomTabNavigator();

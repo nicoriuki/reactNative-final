@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { styles } from '../../styles/style';
+import { styles } from './style';
 import { Image, View, Text } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { logOut } from './../../store/actions/authActions';

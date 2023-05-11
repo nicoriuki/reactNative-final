@@ -1,5 +1,6 @@
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, Text, ScrollView, Image } from 'react-native';
 import { useSelector } from 'react-redux';
+import { styles } from './style';
 
 const PerfilScreen = () => {
       const user = useSelector((state) => state.user.list);
@@ -17,29 +18,5 @@ const PerfilScreen = () => {
             </ScrollView>
       );
 };
-
-const styles = StyleSheet.create({
-      container: {
-            flex: 1,
-            margin: 30,
-      },
-      label: {
-            fontSize: 18,
-            marginBottom: 16,
-      },
-      input: {
-            borderBottomColor: '#ccc',
-            borderBottomWidth: 1,
-            marginBottom: 16,
-            paddingHorizontal: 2,
-            paddingVertical: 4,
-      },
-      image: {
-            width: 70,
-            height: 70,
-            borderRadius: 35,
-            backgroundColor: 'blue',
-      },
-});
 
 export default PerfilScreen;

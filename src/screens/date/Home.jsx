@@ -1,5 +1,5 @@
 import { View, Button } from 'react-native';
-import { styles } from '../../styles/style';
+import { styles } from './style';
 import { List } from '../../components';
 const Home = ({ navigation }) => {
       return (
